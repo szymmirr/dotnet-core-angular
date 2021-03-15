@@ -1,14 +1,100 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+<div class="grid-container">
+  <div class="Header">
+    <img src="szczecin.jpg" alt="Szczecin" class="center">
+    <div class="centered">
+      <p style="text-align:center; color:white; font-size:40px">
+        <b>Szczecin</b> the place to be
+      </p>
+    </div>
+    <div class="centered-lower">
+      <button class="btn btn-red" (click)="explore()">Explore</button>
+    </div>
+  </div>
+  <div class="Left">
+    <div class="Top-left">
+      <img src="szczecin-left.jpg" alt="Szczecin" class="center" style="width:100%;">
+    </div>
+    <div class="Bottom-left"></div>
+    <div class="Bottom-left-left">
+      <h3><b>Top experiences in Szczecin</b></h3>
+      <p>Join our city tour and see all the major touristic attractions in Szczecin</p>
+    </div>
+    <div class="Button-left">
+      <button class="btn btn-red" (click)="details()" style="margin-left:25%; margin-top:20%">See details</button>
+    </div>
+  </div>
+  <div class="Right">
+    <div class="Header-right">
+      <h4 style="color:#e34040">ATTRACTIONS</h4>
+      <hr style="border-width:1px;background-color:red">
+    </div>
+    <div class="One-right">
+      <div class="Img1"><img src="szczecin1.jpg" alt="Szczecin" class="center" style="width:100%;"></div>
+      <div class="Text1">
+        <h5><b>Header with attraction</b></h5>
+        Morbi leo risus, porta ac consecteur
+        <br />
+        <a href="more.html" style="color:#e34040">Read more ➜</a>
+      </div>
+    </div>
+    <div class="Two-right">
+      <div class="Img2"><img src="szczecin2.jpg" alt="Szczecin" class="center" style="width:100%;"></div>
+      <div class="Text2">
+        <h5><b>Header with attraction</b></h5>
+        Morbi leo risus, porta ac consecteur
+        <br />
+        <a href="more.html" style="color:#e34040">Read more ➜</a>
+      </div>
+    </div>
+    <div class="Three-right">
+      <div class="Img3"><img src="szczecin3.jpg" alt="Szczecin" class="center" style="width:100%;"></div>
+      <div class="Text3">
+        <h5><b>Header with attraction</b></h5>
+        Morbi leo risus, porta ac consecteur
+        <br />
+        <a href="more.html" style="color:#e34040">Read more ➜</a>
+      </div>
+    </div>
+    <div class="Four-right">
+      <div class="Img4"><img src="szczecin4.jpg" alt="Szczecin" class="center" style="width:100%;"></div>
+      <div class="Text4">
+        <h5><b>Header with attraction</b></h5>
+        Morbi leo risus, porta ac consecteur
+        <br />
+        <a href="more.html" style="color:#e34040">Read more ➜</a>
+      </div>
+    </div>
+  </div>
+  <div class="Bottom">
+    <div class="One">
+      <img src="szczecin5.png" alt="Szczecin" class="center" style="width:40%;">
+      <br />
+      <h4 style="text-align:center;"><b>Heading</b></h4>
+      <p style="text-align:center;">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <button class="btn btn-red" (click)="details()">See details</button>
+    </div>
+    <div class="Two">
+      <img src="szczecin6.png" alt="Szczecin" class="center" style="width:40%;">
+      <br />
+      <h4 style="text-align:center;"><b>Heading</b></h4>
+      <p style="text-align:center;">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <button class="btn btn-red" (click)="details()">See details</button>
+    </div>
+    <div class="Three">
+      <img src="szczecin7.png" alt="Szczecin" class="center" style="width:40%;">
+      <br />
+      <h4 style="text-align:center;"><b>Heading</b></h4>
+      <p style="text-align:center;">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <button class="btn btn-red" (click)="details()">See details</button>
+    </div>
+  </div>
+  <div class="Footer">
+    <hr style="margin-bottom: 4%" />
+    <a href="about.html" style="color:gray; margin-right: 3%">About us</a>
+    <a href="contact.html" style="color:gray; margin-right: 3%">Contact us</a>
+    <a href="contact.html" style="color:gray; margin-right: 3%">Blog</a>
+    <a href="contact.html" style="color:gray; margin-right: 3%">Terms & conditions</a>
+    <a href="contact.html" style="color:gray">Privacy policy</a>
+    <p style="color:#d1d1d1; font-size:10px; margin-top: 1%">© 2021 Visit Szczecin.</p>
+  </div>
+</div>
