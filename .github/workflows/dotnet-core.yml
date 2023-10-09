@@ -12,13 +12,24 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      
     - name: Setup dotnet
       uses: actions/setup-dotnet@v3
-      with:
-        cache: true
+      
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Test dotnet
       run: dotnet test --verbosity normal
+      
     - name: Execute dotnet
       run: dotnet build
+
+    - name: look
+      run: ls -l
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: dotnet-core-angular-artifact
+        path: build
