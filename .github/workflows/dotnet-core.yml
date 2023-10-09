@@ -28,17 +28,8 @@ jobs:
     - name: Create the package
       run: dotnet pack --configuration Release
 
-    - name: look
-      run: ls -l bin/Debug
-
-    - name: look
-      run: ls -l obj/Debug
-
-    - name: look
-      run: ls -l bin/Release
-
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-core-angular-artifact
-        path: /bin/Release/*.nupkg
+        path: /bin/Release
