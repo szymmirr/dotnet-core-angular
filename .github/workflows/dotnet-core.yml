@@ -19,11 +19,17 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
+    - name: NPM Audit fix
+      run: npm audit fix
+
     - name: Test dotnet
       run: dotnet test --verbosity normal
 
     - name: Execute dotnet
       run: dotnet build
+
+    - name: NPM Audit fix
+      run: npm audit fix
 
     - name: Create the package
       run: dotnet pack --configuration Release
@@ -32,4 +38,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-core-angular-artifact
-        path: bin/Release
+        path: bin/Release/dotnet-core-angular.1.0.0.nupkg
