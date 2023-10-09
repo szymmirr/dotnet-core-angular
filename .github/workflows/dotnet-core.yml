@@ -19,13 +19,19 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
+    - name: npm audit
+      run: npm audit
+
     - name: Test dotnet
       run: dotnet test --verbosity normal
 
     - name: Execute dotnet
       run: dotnet build
 
-    - name: NPM Audit fix
+    - name: Create npm lockfile
+      run: npm i --package-lock-only
+
+    - name: npm audit fix
       run: npm audit fix
 
     - name: Create the package
