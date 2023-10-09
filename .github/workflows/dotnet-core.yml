@@ -19,9 +19,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: NPM Audit fix
-      run: npm audit fix
-
     - name: Test dotnet
       run: dotnet test --verbosity normal
 
