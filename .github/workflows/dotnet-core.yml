@@ -12,27 +12,33 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+
     - name: Setup dotnet
       uses: actions/setup-dotnet@v3
-      
+
     - name: Restore dependencies
       run: dotnet restore
-      
+
     - name: Test dotnet
       run: dotnet test --verbosity normal
-      
+
     - name: Execute dotnet
       run: dotnet build
 
-    - name: look
-      run: ls -l bin
+    - name: Create the package
+      run: dotnet pack --configuration Release
 
     - name: look
-      run: ls -l obj
+      run: ls -l bin/Debug
+
+    - name: look
+      run: ls -l obj/Debug
+
+    - name: look
+      run: ls -l bin/Release
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-core-angular-artifact
-        path: bin
+        path: /bin/Release/*.nupkg
