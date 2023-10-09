@@ -26,10 +26,13 @@ jobs:
       run: dotnet build
 
     - name: look
-      run: ls -l
+      run: ls -l bin
+
+    - name: look
+      run: ls -l obj
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-core-angular-artifact
-        path: build
+        path: bin
