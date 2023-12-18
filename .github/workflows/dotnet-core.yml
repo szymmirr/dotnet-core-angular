@@ -29,7 +29,7 @@ jobs:
       run: dotnet pack --configuration Release
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: dotnet-core-angular-artifact
         path: bin/Release/dotnet-core-angular.1.0.0.nupkg
