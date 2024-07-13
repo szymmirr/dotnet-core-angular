@@ -23,7 +23,7 @@
     "@angular/router": "8.2.14",
     "@nguniversal/module-map-ngfactory-loader": "8.2.6",
     "aspnet-prerendering": "^3.0.1",
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.0.0",
     "core-js": "^3.37.0",
     "jquery": "3.7.1",
     "oidc-client": "^1.11.5",
